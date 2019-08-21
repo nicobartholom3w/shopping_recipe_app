@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +13,8 @@ import { ShoppingListEditComponent } from './header/shopping-list/shopping-list-
 import { IngredientComponent } from './header/shopping-list/ingredient/ingredient.component';
 import { RecipesComponent } from './header/recipes/recipes.component';
 import { RecipeListComponent } from './header/recipes/recipe-list/recipe-list.component';
+import { MaterialIconsComponent } from './material-icons/material-icons.component';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +24,16 @@ import { RecipeListComponent } from './header/recipes/recipe-list/recipe-list.co
     ShoppingListEditComponent,
     IngredientComponent,
     RecipesComponent,
-    RecipeListComponent
+    RecipeListComponent,
+    MaterialIconsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
