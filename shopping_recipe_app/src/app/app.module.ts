@@ -13,6 +13,7 @@ import { ShoppingListEditComponent } from './header/shopping-list/shopping-list-
 import { IngredientComponent } from './header/shopping-list/ingredient/ingredient.component';
 import { RecipesComponent } from './header/recipes/recipes.component';
 import { RecipeListComponent } from './header/recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './header/recipes/recipe-item/recipe-item.component';
 import { MaterialIconsComponent } from './material-icons/material-icons.component';
 
 
@@ -25,6 +26,7 @@ import { MaterialIconsComponent } from './material-icons/material-icons.componen
     IngredientComponent,
     RecipesComponent,
     RecipeListComponent,
+    RecipeItemComponent,
     MaterialIconsComponent
   ],
   imports: [
