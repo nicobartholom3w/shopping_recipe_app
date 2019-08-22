@@ -3,81 +3,118 @@
     height: 5rem;
     width: 100%;
     display: flex;
-    align-items: center;
     background-color: rgba(128, 190, 209, 0.1);
 
     &__main-container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         width: 100%;
         height: 100%;
+        font-weight: bold;
     }
 
     &__left {
-        height: 2.5rem;
+        height: 100%;
         display: flex;
-        align-items: flex-end;
         justify-content: space-between;
         width: 39rem;
-        font-weight: bold;
     }
 
     &__link {
         color: rgba(70, 55, 55, .65);
-        transition: all .2s;
+        
         text-decoration: none;
         padding: .75rem 1rem;
-        text-align: center;
-        // background-color: pink;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: all .3s;
         
         &:hover {
             color: rgba(70, 55, 55, 1);
+            background-color:  rgba(128, 190, 209, 0.2);
         }
     }
 
     &__header {
-        height: 3rem;
-        width: 16rem;
         font-size: 2.5rem;
-        // background-color: pink;
-
-    }
-
-    &__collapse {
-        height: 100%;
+        min-width: 16rem;
     }
 
     &__list {
         height: 100%;
         display: flex;
-        align-items: flex-end;
         justify-content: space-between;
-        // background-color: blue;
         width: 20rem;
 
         &-item {
             font-size: 1.5rem;
-            
         }
     }
 
     &__right {
-        height: 3.5rem;
+        height: 100%;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+    }
+
+    &__menu {
+        display: none;
     }
 }
 
 .dropdown {
     height: 100%;
+
     &__toggle {
         display: flex;
         align-items: center;
+        
+        &-manage {
+            padding-left: 2rem;
+        }
     }
 
     &-icon {
-        padding: 0 .5rem;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+}
+
+.main-icon {
+    display: none;
+}
+
+@media (max-width: 505px) {
+
+    .navi {
+
+        &__menu {
+            display: block;
+        }
+
+        &__left {
+            width: 22px;
+        }
+
+        &__header {
+            display: none;
+        }
+
+        &__collapse {
+            display: none;
+        }
+    }
+
+    .main-icon {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.75rem;
+    }
+
 }
