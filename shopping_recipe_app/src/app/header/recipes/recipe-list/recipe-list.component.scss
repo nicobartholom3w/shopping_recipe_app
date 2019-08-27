@@ -1,4 +1,47 @@
-.img {
-    height: 4rem;
-    width: 4rem;
+
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(128, 190, 209, 0.1);
+   height: 100%;
+   width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+
+    &__link {
+        text-decoration: none;
+        color: rgba(70, 55, 55, .65); 
+       width: 26rem;
+       height: 10rem;
+       display: block;
+       transition: all .3s;
+
+        &:hover {
+            color: rgba(70, 55, 55, 1);
+            background-color:  rgba(128, 190, 209, 0.2);
+        }
+    }
+
+    &__text {
+        width: 15rem;
+
+    }
+
+    &__title {
+        display: block;
+    }
+
+    &__desc {
+        display: block;
+        
+    }
+
+    &__img {
+        height: 8rem;
+        width: 8rem;
+        color: rgba(70, 55, 55, .65); 
+    }
 }
