@@ -14,7 +14,7 @@
     &__link {
         text-decoration: none;
         color: rgba(70, 55, 55, .65); 
-       width: 26rem;
+       min-width: 26rem;
        height: 10rem;
        display: block;
        transition: all .3s;
@@ -44,4 +44,26 @@
         width: 8rem;
         color: rgba(70, 55, 55, .65); 
     }
+}
+
+.button {
+    outline: none;
+    border: solid 1px rgba(70, 55, 55, .65); 
+    color:  rgba(70, 55, 55, .65);
+    text-align: center;
+    padding: .25rem;
+    width: 10rem;
+    transition: all .3s;
+    
+    &:hover {
+        background-color:  rgba(128, 190, 209, 1);
+        color: white;
+    }
+    &__recipe {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 505px) {
+
 }
