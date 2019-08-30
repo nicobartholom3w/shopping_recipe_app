@@ -15,6 +15,7 @@ import { RecipesComponent } from './header/recipes/recipes.component';
 import { RecipeListComponent } from './header/recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './header/recipes/recipe-item/recipe-item.component';
 import { MaterialIconsComponent } from './material-icons/material-icons.component';
+import { RecipeDetailComponent } from './header/recipes/recipe-item/recipe-detail/recipe-detail.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MaterialIconsComponent } from './material-icons/material-icons.componen
     RecipesComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    MaterialIconsComponent
+    MaterialIconsComponent,
+    RecipeDetailComponent
   ],
   imports: [
     BrowserModule,

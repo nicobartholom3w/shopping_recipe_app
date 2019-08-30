@@ -1,0 +1,18 @@
+.recipe {
+
+    &__link{
+        color:  rgba(128, 190, 209, 1);
+    }
+}
+
+.managereceipe {
+
+    background-color: purple;
+
+    &__button {
+        display: block;    
+        height: 10rem;
+        max-width: 20rem;
+        text-align: center;
+    }
+}
