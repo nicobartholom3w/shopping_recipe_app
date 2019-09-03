@@ -8,14 +8,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './header/shopping-list/shopping-list.component';
-import { ShoppingListEditComponent } from './header/shopping-list/shopping-list-edit/shopping-list-edit.component';
-import { IngredientComponent } from './header/shopping-list/ingredient/ingredient.component';
-import { RecipesComponent } from './header/recipes/recipes.component';
-import { RecipeListComponent } from './header/recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './header/recipes/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingListEditComponent } from './shopping-list/shopping-edit/shopping-list-edit.component';
+import { IngredientComponent } from './shopping-list/ingredient/ingredient.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component';
 import { MaterialIconsComponent } from './material-icons/material-icons.component';
-import { RecipeDetailComponent } from './header/recipes/recipe-item/recipe-detail/recipe-detail.component';
+import { RecipeDetailComponent } from './recipes/recipe-item/recipe-detail/recipe-detail.component';
 
 
 @NgModule({
