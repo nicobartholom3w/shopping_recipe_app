@@ -1,16 +1,10 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="main">
   
-  <app-header></app-header>
+  <app-header (menuChange)="display = $event"></app-header>
 
   <div class="body">
-      
-    <app-recipe-list></app-recipe-list>
-    
-    <app-recipe-detail></app-recipe-detail>
-    
-    <app-shopping-list-edit></app-shopping-list-edit>
-    
-    <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="display === 'recipes' || display === undefined"></app-recipes>
+      <app-shopping-list *ngIf="display !== 'recipes'"></app-shopping-list>
   </div>
 </div>
