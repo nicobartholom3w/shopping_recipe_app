@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,14 +6,21 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() menuChange = new EventEmitter<string>()
+  // @Output() menuChange = new EventEmitter<boolean>()
+  dropdownStatus: boolean = false
 
-  changeMenu(feature) {
-    this.menuChange.emit(feature)
+  displayMenu() {  
+    this.dropdownStatus = !this.dropdownStatus
   }
+
+  showDropdown(element: ElementRef) {
+
+  }
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

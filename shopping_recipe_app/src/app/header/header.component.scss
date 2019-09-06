@@ -66,6 +66,7 @@
 
 .dropdown {
     height: 100%;
+    position: relative;
 
     &__toggle {
         display: flex;
@@ -88,21 +89,32 @@
         flex-direction: column;
         background-color: rgba(128, 190, 209, 0.2);
         align-items: center;
-        visibility: hidden;
+        position: absolute;
 
         &-item {
             color:  rgba(70, 55, 55, .65);
-            width: 100%;
+            width: 120.5px;
             padding-left: 2rem;
             text-decoration: none;
+            transition: all .3s;
+
 
             &:hover {
                 color: rgba(70, 55, 55, 1);
-                background-color:  rgba(128, 190, 209, 0.3);
+                background-color:  rgba(128, 190, 209, 0.5);
             }
         }
 
     }
+
+    &__down {
+        background-color: rgba(128, 190, 209, 0.1);
+
+        &:hover {
+            background-color:  rgba(128, 190, 209, 0.3);
+        }
+    }
+
 }
 
 .main-icon {
@@ -138,8 +150,4 @@
         padding: 1.75rem;
     }
 
-}
-
-.visible {
-    visibility: visible;
 }
