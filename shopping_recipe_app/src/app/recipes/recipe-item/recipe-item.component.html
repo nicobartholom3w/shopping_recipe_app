@@ -1,1 +1,9 @@
-<p>recipe-item works!</p>
+<a href="#" class="link item__link">
+    <div class="item">
+        <div class="item__text">
+            <h4 class="item__title"> {{ recipe.name }}</h4>
+            <p class="item__desc">{{ recipe.description }}</p>
+        </div>
+        <div class="img__responsive img"><img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="item__img"></div>
+    </div>
+</a>

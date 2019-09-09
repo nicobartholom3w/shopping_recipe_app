@@ -9,5 +9,5 @@ export class DropdownDirective {
     constructor(private dropdownRef: ElementRef, private renderer: Renderer2) {
 
     }
-    
+
 }
