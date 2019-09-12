@@ -1,13 +1,13 @@
 <nav class="navi">
     <div class="navi__main-container">
         <div class="navi__left">
-            <div class="navi__header">              
-                <a href="#" class="navi__header-title navi__link">Recipe Book</a>
+            <div class="navi__header" >              
+                <a class="navi__header-title navi__link" routerLink="/">Recipe Book</a>
             </div>
             <div class="navi__collapse">
                 <div class="navi__list" role="list">
-                    <div class="navi__list-item" role="listitem"><a href="#" (click)="changeMenu('recipes')" class="navi__link">Recipes</a></div>
-                    <div class="navi__list-item" role="listitem"><a href="#" (click)="changeMenu('list')" class="navi__link">Shopping List</a></div>
+                    <div class="navi__list-item" routerLinkActive="current-menu" role="listitem"><a routerLink="/recipes" class="navi__link">Recipes</a></div>
+                    <div class="navi__list-item" routerLinkActive="current-menu" role="listitem"><a routerLink="/shopping-list" class="navi__link">Shopping List</a></div>
                 </div>
             </div>
             <div class="navi__menu" >
@@ -17,11 +17,11 @@
             </div>
         </div>
         <div class="navi__right">
-            <div class="dropdown" (click)="displayMenu()"[ngClass]="dropdownStatus ? 'dropdown__down' : 'dropdown__up'">
+            <div class="dropdown" (click)="displayMenu()" [ngClass]="dropdownStatus ? 'dropdown__down' : 'dropdown__up'">
                 <a href="#" class="dropdown__toggle dropdown__toggle-manage navi__link" role="button">Manage
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
                 </a>
-                <div class="dropdown__options" [ngClass]="dropdownStatus ? 'visible' : 'hidden'">
+                <div class="dropdown__options" [ngClass]="dropdownStatus ? 'visible' : 'invisible'">
                     <a href="#" class="dropdown__options-item">Save Data</a>
                     <a href="#" class="dropdown__options-item">Fetch Data</a>
                 </div>

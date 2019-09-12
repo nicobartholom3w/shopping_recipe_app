@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +19,11 @@ import { MaterialIconsComponent } from './material-icons/material-icons.componen
 import { RecipeDetailComponent } from './recipes/recipe-item/recipe-detail/recipe-detail.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 
+const appRoutes: Routes = [
+  // { path: '', component: AppComponent },
+  { path: 'recipes', component: RecipesComponent },
+  { path: 'shopping-list', component: ShoppingListComponent }
+]
 
 @NgModule({
   declarations: [
@@ -39,7 +45,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

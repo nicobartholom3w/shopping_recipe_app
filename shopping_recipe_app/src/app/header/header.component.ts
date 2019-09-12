@@ -13,10 +13,6 @@ export class HeaderComponent implements OnInit {
     this.dropdownStatus = !this.dropdownStatus
   }
 
-  showDropdown(element: ElementRef) {
-
-  }
-
   constructor() { }
 
   ngOnInit() {

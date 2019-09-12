@@ -1,5 +1,6 @@
 <div role="button" class="button button__recipe">New Recipe</div>
 <app-recipe-item 
     *ngFor="let recipeEl of recipes"
-    [recipe]="recipeEl"></app-recipe-item>
+    [recipe]="recipeEl"
+    (click)="displayRecipeDetails(recipeEl)"></app-recipe-item>
 

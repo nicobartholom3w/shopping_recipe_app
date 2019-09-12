@@ -5,7 +5,7 @@
 
 .button {
     border: solid 1px rgba(70, 55, 55, .65); 
-    color:  rgba(70, 55, 55, .65);
+    color:  rgba(70, 55, 55, .8);
     text-align: center;
     padding: .25rem;
     min-width: 10rem;
@@ -33,11 +33,11 @@ a:hover {
 }
 
 .visible {
-    /* opacity: 1; */
+    opacity: 1;
     visibility: visible;
 }
 
-.hidden {
+.invisible {
     visibility: hidden;
-    /* opacity: 0 */
+    opacity: 0
 }
