@@ -1,4 +1,4 @@
-<h1>Recipe Name</h1>
+<h1>{{ recipe.name }}</h1>
 
 <!-- <div role="button" class="button button__managerecipe">Manage Recipe</div> -->
 <div class="managerecipe">  
@@ -12,6 +12,9 @@
 <a href="#" class="recipe__link">Delete Recipe</a>
 <!-- end toggle -->
 
-<div class="description-header">Description</div>
+<div class="description-header"> {{ recipe.description }}</div>
 
-<div class="ingredients-list">Ingredients</div>
+<div class="ingredients-list" 
+    *ngFor="let ingredient of recipe.ingredients"> 
+        {{ ingredient.name }} - {{ ingredient.amount}} 
+</div>

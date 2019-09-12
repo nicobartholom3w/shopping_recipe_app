@@ -13,7 +13,7 @@ export class RecipeItemComponent implements OnInit {
   constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
-    console.log(this.recipe.name);
+   
   }
 
   onSelected() {

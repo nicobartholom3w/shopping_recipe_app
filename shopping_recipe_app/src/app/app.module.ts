@@ -18,6 +18,7 @@ import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component
 import { MaterialIconsComponent } from './material-icons/material-icons.component';
 import { RecipeDetailComponent } from './recipes/recipe-item/recipe-detail/recipe-detail.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   // { path: '', component: AppComponent },
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     RecipeItemComponent,
     MaterialIconsComponent,
     RecipeDetailComponent,
-    DropdownDirective
+    DropdownDirective,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
