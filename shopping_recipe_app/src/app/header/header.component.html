@@ -18,7 +18,7 @@
         </div>
         <div class="navi__right">
             <div class="dropdown" (click)="displayMenu()" [ngClass]="dropdownStatus ? 'dropdown__down' : 'dropdown__up'">
-                <a href="#" class="dropdown__toggle dropdown__toggle-manage navi__link" role="button">Manage
+                <a [routerLink]="['/recipes', '/shopping-list']" class="dropdown__toggle dropdown__toggle-manage navi__link" role="button">Manage
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
                 </a>
                 <div class="dropdown__options" [ngClass]="dropdownStatus ? 'visible' : 'invisible'">

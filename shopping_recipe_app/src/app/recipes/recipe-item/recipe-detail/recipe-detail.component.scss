@@ -27,6 +27,14 @@
         align-items: center;
         width: 15rem;
         font-weight: bold;
+        text-decoration: none;
+
+        &:visited {
+            color:  rgba(70, 55, 55, .8);
+        }
+        &:hover {
+            color: white;
+        }
         // margin: 1rem 1rem 0 1rem;
     }
 

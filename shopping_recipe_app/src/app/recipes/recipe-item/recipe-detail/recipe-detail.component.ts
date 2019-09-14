@@ -8,10 +8,14 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe[];
+  status: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  openManageRecipe() {
+    this.status = !this.status;
+  }
 }

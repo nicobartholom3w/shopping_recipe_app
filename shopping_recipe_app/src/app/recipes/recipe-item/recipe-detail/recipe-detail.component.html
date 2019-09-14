@@ -1,10 +1,10 @@
 <h1 class="recipe__name">{{ recipe.name }}</h1>
 
-<div class="managerecipe" role="button">  
-    <a routerLink="" class="button managerecipe__button">Manage Recipe
+<div class="managerecipe" role="button" (click)="openManageRecipe()">  
+    <a [routerLink]="['/recipes']" class="button managerecipe__button link" [ngClass]="status ? 'dropdown__down' : 'dropdown__up'">Manage Recipe
         <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
     </a>
-    <div class="managerecipe__toggle">
+    <div class="managerecipe__toggle" [ngClass]="status ? 'visible' : 'invisible'">
         <a routerLink="/shopping-list" class="recipe__link">To Shopping List</a>
         <a routerLink="" class="recipe__link">Edit Recipe</a>
         <a routerLink="" class="recipe__link">Delete Recipe</a>
