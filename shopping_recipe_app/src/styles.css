@@ -36,9 +36,12 @@ a:hover {
 .visible {
     opacity: 1;
     visibility: visible;
+    display: block;
 }
 
 .invisible {
     visibility: hidden;
-    opacity: 0
+    opacity: 0;
+    display: none;
+    height: 0;
 }
