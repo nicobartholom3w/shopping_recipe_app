@@ -12,12 +12,20 @@
 
     &__link {
         text-decoration: none;
-        color: rgba(70, 55, 55, .8); 
-       min-width: 26rem;
-       height: 10rem;
-       display: block;
-       transition: all .3s;
-       margin: 2rem 0;
+        color: rgba(70, 55, 55, .8);
+        margin: 2rem 0;
+        margin-right: 2rem; 
+        // min-width: 26rem;
+        // max-width: 36rem;
+        // width: 100%;
+        // width: 36rem;
+        height: 10rem;
+        display: flex;
+        transition: all .3s;
+        position: relative;
+        flex-basis: 1 0 26rem;
+        // flex-grow: 1;
+        // flex-shrink: 1;
 
         &:hover {
             color: rgba(70, 55, 55, 1);
@@ -47,6 +55,11 @@
 }
 
 
-@media (max-width: 505px) {
+@media (max-width: 600px) {
+    .item {
 
+        &__link {
+            margin-right: 0; 
+        }
+    }
 }

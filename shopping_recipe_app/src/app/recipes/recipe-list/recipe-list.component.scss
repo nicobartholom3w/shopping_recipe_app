@@ -18,6 +18,16 @@
     }
 }
 
-@media (max-width: 505px) {
+.recipe-list {
+    background-color: lavender;
+    width: 100%;
+    height: 100%;
+   margin-bottom: 2rem;
+}
 
+@media (min-width: 600px) {
+    .recipe-list {
+       display: flex;
+    //    justify-content: space-between;
+    }
 }

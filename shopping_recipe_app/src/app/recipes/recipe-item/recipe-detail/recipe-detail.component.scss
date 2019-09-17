@@ -2,6 +2,8 @@
 
     &__name {
         margin: 2rem 0;
+        color: rgba(70, 55, 55, 1);
+        font-weight: bold;
     }
     &__link {
         padding: .5rem 0;
@@ -14,6 +16,18 @@
             color:  rgba(70, 55, 55, 1);
         }
     }
+
+    &__description {
+        color: rgba(70, 55, 55, 1);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.ingredients-list {
+    margin: 1rem;
+    background-color: pink;
+    max-width: 26rem;
 }
 
 .managerecipe {
@@ -64,4 +78,8 @@
         margin-top: .5rem;
         font-size: 2rem;
     }
+}
+
+.visible {
+    height: 8.3rem;
 }

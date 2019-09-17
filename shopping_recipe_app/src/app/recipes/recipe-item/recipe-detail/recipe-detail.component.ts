@@ -18,4 +18,5 @@ export class RecipeDetailComponent implements OnInit {
   openManageRecipe() {
     this.status = !this.status;
   }
+  
 }
