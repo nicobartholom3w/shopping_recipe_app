@@ -19,18 +19,17 @@
 }
 
 .recipe-list {
-    background-color: lavender;
     width: 100%;
     height: 100%;
     margin-bottom: 2rem;
-    // display: flex;
-    // flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 @media (min-width: 650px) {
     .recipe-list {
-       display: flex;
-       flex-wrap: wrap;
+        flex-direction: row;
     }
 
     .recipe-item-class {

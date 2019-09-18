@@ -9,17 +9,17 @@ export class RecipesService {
     recipeSelected = new EventEmitter<Recipe>();
 
     recipes: Recipe [] = [
-        new Recipe('A Test Recipe', 'This is simply a test', 'assets/img/recipe-icon.svg', 
+        new Recipe(1, 'A Test Recipe', 'This is simply a test', 'assets/img/recipe-icon.svg', 
         [
             new Ingredient('Meat', 10),
             new Ingredient('Cheeses', 22)
         ]),
-        new Recipe('Another Test Recipe', 'This is another test recipe', 'assets/img/recipe-icon.svg',
+        new Recipe(2, 'Another Test Recipe', 'This is another test recipe', 'assets/img/recipe-icon.svg',
         [
             new Ingredient('Apples', 36),
             new Ingredient('Kabocha', 57)
         ]),
-        new Recipe('Delicious Recipe', 'Splendorous sweets potats', 'assets/img/recipe-icon.svg',
+        new Recipe(3, 'Delicious Recipe', 'Splendorous sweets potats', 'assets/img/recipe-icon.svg',
         [
             new Ingredient('sweets potatos', 52),
             new Ingredient('onions', 200)
