@@ -15,6 +15,7 @@
             background-color: rgba(128, 190, 209, .35);
             color:  rgba(70, 55, 55, 1);
         }
+
     }
 
     &__description {
@@ -22,17 +23,36 @@
         font-size: 2rem;
         margin-bottom: 1rem;
     }
+
+    &__header {
+
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }
 
 .ingredients-list {
     margin: 1rem;
-    background-color: pink;
+    background-color:  rgba(128, 190, 209, .1);
+    color: rgba(70, 55, 55, .8);
     max-width: 26rem;
+    padding-left: 1.5rem;
 }
 
 .managerecipe {
     width: 15rem;
     margin: 1rem;
+
+    &-top {
+        display: none;
+    }
+
+    &-side {
+        display: block;
+    }
 
     &__button {
         display: flex;
@@ -48,6 +68,11 @@
         }
         &:hover {
             color: white;
+        }
+
+        &:focus {
+            color: white;
+            background-color:  rgba(128, 190, 209, 1);
         }
     }
 
@@ -82,4 +107,17 @@
 
 .visible {
     height: 8.3rem;
+}
+
+@media (max-width: 600px) {
+    .managerecipe {
+
+        &-top {
+            display: block;
+        }
+
+        &-side {
+            display: none;
+        }
+    }
 }

@@ -5,11 +5,17 @@
     border: solid 1px rgba(70, 55, 55, .65); 
     color:  rgba(70, 55, 55, .8);
     text-align: center;
-    padding: .25rem;
+    padding: .5rem 1rem;
     max-width: 15rem;
     transition: all .3s;
+    font-weight: bold;
     
     &:hover {
+        background-color:  rgba(128, 190, 209, 1);
+        color: white;
+    }
+
+    &:focus {
         background-color:  rgba(128, 190, 209, 1);
         color: white;
     }

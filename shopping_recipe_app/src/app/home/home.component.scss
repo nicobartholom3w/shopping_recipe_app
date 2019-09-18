@@ -1,0 +1,36 @@
+
+
+.home {
+
+    &-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    &-title {
+        color:  rgba(128, 190, 209, 1);
+    }
+    &-info {
+        margin-left: 4rem;
+    }
+
+    &-img {
+        top: 10rem;
+        right: 2rem;
+        height: 50rem;
+        width: 50rem;
+        position: fixed;
+        opacity: .13;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .home {
+
+        &-img {
+            left: 0;
+        }
+    }
+}
