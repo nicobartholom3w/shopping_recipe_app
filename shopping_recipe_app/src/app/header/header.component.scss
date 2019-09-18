@@ -1,7 +1,8 @@
 
 .navi {
-    height: 5rem;
+    height: 8rem;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     background-color: rgba(128, 190, 209, 0.1);
 
@@ -17,18 +18,21 @@
         height: 100%;
         display: flex;
         justify-content: space-between;
-        width: 39rem;
+        width: 60rem;
     }
 
     &__link {
         color: rgba(70, 55, 55, .8);
-        
         text-decoration: none;
-        padding: .75rem 1rem;
+        padding: 0 2rem;
+        white-space: nowrap;
+        width: 100%;
         height: 100%;
         display: flex;
+        justify-content: center;
         align-items: center;
         transition: all .3s;
+        text-align: center;
         
         &:hover {
             color: rgba(70, 55, 55, 1);
@@ -37,18 +41,22 @@
     }
 
     &__header {
-        font-size: 2.5rem;
-        min-width: 16rem;
+        font-size: 3.5rem;
+        // min-width: 16rem;
+        &-title {
+            padding: 0 3rem 0 2.75rem;
+        }
     }
 
     &__list {
         height: 100%;
         display: flex;
         justify-content: space-between;
-        width: 20rem;
+        // width: 40rem;
 
         &-item {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            // width: 15rem;
         }
     }
 
@@ -74,12 +82,13 @@
         align-items: center;
         
         &-manage {
-            padding-left: 2rem;
+            padding-left: 2.25rem;
         }
     }
 
     &-icon {
-        padding: 2rem;
+        margin-left: 1rem;
+        font-size: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -92,11 +101,13 @@
         align-items: center;
         position: absolute;
         transition: all .3s;
+        width: 100%;
 
         &-item {
             color:  rgba(70, 55, 55, .8);
-            width: 120.5px;
-            padding-left: 2rem;
+            // width: 120.5px;
+            width: 100%;
+            padding-left: 2.25rem;
             text-decoration: none;
             transition: all .3s;
 
@@ -118,25 +129,30 @@
     }
 
 }
-
 .main-icon {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 1.75rem;
+    font-size: 3.5rem;
 }
 
-@media (max-width: 505px) {
+
+
+@media (max-width: 650px) {
 
     .navi {
 
         &__menu {
-            display: block;
+            display: flex;
+
+            &-dropdown {
+                padding: 0 3rem 0 1.75rem;
+            }
         }
 
         &__left {
-            width: 22px;
-        }
-
-        &__header {
-            display: none;
+            justify-content: flex-start;
         }
 
         &__collapse {
@@ -145,11 +161,17 @@
     }
 
     .main-icon {
-        display: inline-block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1.75rem;
+   
     }
+   
 
+}
+
+@media (max-width: 500px) {
+    .navi {
+
+        &__header {
+            display: none;
+        }
+    }
 }

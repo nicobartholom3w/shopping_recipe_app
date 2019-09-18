@@ -6,7 +6,7 @@
     color:  rgba(70, 55, 55, .8);
     text-align: center;
     padding: .25rem;
-    width: 10rem;
+    max-width: 15rem;
     transition: all .3s;
     
     &:hover {
@@ -14,8 +14,12 @@
         color: white;
     }
     &__recipe {
-        margin-bottom: 4rem;
+        // margin-bottom: 4rem;
     }
+}
+
+.info-text {
+    padding: 1rem 0;
 }
 
 .recipe-list {
