@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipesService } from '../recipes.service';
 
@@ -8,6 +8,9 @@ import { RecipesService } from '../recipes.service';
   styleUrls: ['./recipe-item.component.scss']
 })
 export class RecipeItemComponent implements OnInit {
+// creates class on component that can be altered in parent component
+  @HostBinding('class.recipe-item-class') recipeItemClass = true;
+
   @Input() recipe: Recipe;
 
   constructor(private recipesService: RecipesService) { }

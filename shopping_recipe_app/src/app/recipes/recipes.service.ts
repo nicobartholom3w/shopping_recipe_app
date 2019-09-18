@@ -18,6 +18,11 @@ export class RecipesService {
         [
             new Ingredient('Apples', 36),
             new Ingredient('Kabocha', 57)
+        ]),
+        new Recipe('Delicious Recipe', 'Splendorous sweets potats', 'assets/img/recipe-icon.svg',
+        [
+            new Ingredient('sweets potatos', 52),
+            new Ingredient('onions', 200)
         ])
       ];
     
