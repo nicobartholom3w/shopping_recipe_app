@@ -10,23 +10,22 @@
                     <div class="navi__list-item" routerLinkActive="current-menu" role="listitem"><a routerLink="/shopping-list" class="navi__link">Shopping List</a></div>
                 </div>
             </div>
-            <div class="navi__menu" >
-                <a class="navi__menu-dropdown dropdown__toggle navi__link" role="button">
+            <div class="navi__menu" (click)="displayMenu('main')">
+                <a class="navi__menu-dropdown dropdown__toggle navi__link" role="button" [ngClass]="mainDropdownStatus ? 'dropdown__down' : 'dropdown__up'">
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon main-icon">menu</mat-icon>
                 </a>
-                <div class="dropdown__menu">
-
-                    <a [routerLink]="['recipes']" class="dropdown__menu-item">Recipes</a>
-                    <a [routerLink]="['shopping-list']" class="dropdown__menu-item">Shopping List</a>
+                <div class="dropdown__menu dropdown__options" [ngClass]="mainDropdownStatus ? 'visible' : 'invisible'">
+                    <a [routerLink]="['recipes']" class="dropdown__menu-item dropdown__options-item">Recipes</a>
+                    <a [routerLink]="['shopping-list']" class="dropdown__menu-item dropdown__options-item">Shopping List</a>
                 </div>
             </div>
         </div>
         <div class="navi__right">
-            <div class="dropdown" (click)="displayMenu()" [ngClass]="dropdownStatus ? 'dropdown__down' : 'dropdown__up'">
-                <a [routerLink]="['/recipes', '/shopping-list']" class="dropdown__toggle dropdown__toggle-manage navi__link" role="button">Manage
+            <div class="dropdown" (click)="displayMenu('manage')" [ngClass]="manageDropdownStatus ? 'dropdown__down' : 'dropdown__up'">
+                <a class="dropdown__toggle dropdown__toggle-manage navi__link" role="button">Manage
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
                 </a>
-                <div class="dropdown__options" [ngClass]="dropdownStatus ? 'visible' : 'invisible'">
+                <div class="dropdown__options" [ngClass]="manageDropdownStatus ? 'visible' : 'invisible'">
                     <a href="#" class="dropdown__options-item">Save Data</a>
                     <a href="#" class="dropdown__options-item">Fetch Data</a>
                 </div>

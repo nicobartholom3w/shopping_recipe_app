@@ -107,9 +107,11 @@
             color:  rgba(70, 55, 55, .8);
             // width: 120.5px;
             width: 100%;
+            padding: .25rem;
             padding-left: 2.25rem;
             text-decoration: none;
             transition: all .3s;
+            font-size: 1.25rem;
 
 
             &:hover {
@@ -118,13 +120,24 @@
             }
         }
 
-        &__menu {
-            display: flex;
-            flex-direction: column;
+       
+    }
 
-            &-item {
-                color: black;
-            }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 8rem;
+        width: 12rem;
+
+        &-item {
+            color:  rgba(70, 55, 55, .8);
+            white-space: nowrap;
+            padding: .25rem;
+            padding-left: 2rem;
+            font-size: 1.25rem;
+            height: 100%;
         }
     }
 
@@ -153,6 +166,7 @@
 
         &__menu {
             display: flex;
+            position:relative;
 
             &-dropdown {
                 padding: 0 3rem 0 1.75rem;

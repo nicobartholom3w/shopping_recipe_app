@@ -7,10 +7,16 @@ import { Component, OnInit, Output, EventEmitter, ElementRef, Input } from '@ang
 })
 export class HeaderComponent implements OnInit {
   // @Output() menuChange = new EventEmitter<boolean>()
-  dropdownStatus: boolean = false
+  mainDropdownStatus: boolean = false;
+  manageDropdownStatus: boolean = false;
 
-  displayMenu() {  
-    this.dropdownStatus = !this.dropdownStatus
+  displayMenu(element: string) {  
+    if(element === "main") {
+      this.mainDropdownStatus = !this.mainDropdownStatus;
+    }
+    else if(element === "manage") {
+      this.manageDropdownStatus = !this.manageDropdownStatus;
+    }
   }
 
   constructor() { }
