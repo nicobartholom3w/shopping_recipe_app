@@ -11,9 +11,14 @@
                 </div>
             </div>
             <div class="navi__menu" >
-                <a routerLink="" class="navi__menu-dropdown dropdown__toggle navi__link" role="button">
-                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon main-icon">menu</mat-icon>
+                <a class="navi__menu-dropdown dropdown__toggle navi__link" role="button">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon main-icon">menu</mat-icon>
                 </a>
+                <div class="dropdown__menu">
+
+                    <a [routerLink]="['recipes']" class="dropdown__menu-item">Recipes</a>
+                    <a [routerLink]="['shopping-list']" class="dropdown__menu-item">Shopping List</a>
+                </div>
             </div>
         </div>
         <div class="navi__right">

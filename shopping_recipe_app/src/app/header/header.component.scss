@@ -118,6 +118,14 @@
             }
         }
 
+        &__menu {
+            display: flex;
+            flex-direction: column;
+
+            &-item {
+                color: black;
+            }
+        }
     }
 
     &__down {
@@ -160,9 +168,6 @@
         }
     }
 
-    .main-icon {
-   
-    }
    
 
 }
