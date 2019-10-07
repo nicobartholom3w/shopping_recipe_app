@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, ElementRef, Input } from '@angular/core';
+import { ManageOverlayService } from '../manage-overlay.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -6,23 +8,30 @@ import { Component, OnInit, Output, EventEmitter, ElementRef, Input } from '@ang
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // @Output() menuChange = new EventEmitter<boolean>()
+  
   mainDropdownStatus: boolean = false;
   manageDropdownStatus: boolean = false;
 
-  displayMenu(element: string) {  
+  menuStatus(element: string) {  
     if(element === "main") {
       this.mainDropdownStatus = !this.mainDropdownStatus;
     }
     else if(element === "manage") {
       this.manageDropdownStatus = !this.manageDropdownStatus;
     }
+    this.manageOverlayService.manageOverlay();
   }
 
-  constructor() { }
+  constructor(private manageOverlayService: ManageOverlayService) { }
 
   ngOnInit() {
-
+    this.manageOverlayService.overlayClickedSubject
+      .subscribe((isOverlayActive) => {
+        if(!isOverlayActive) {
+          this.mainDropdownStatus = !this.mainDropdownStatus;
+          this.manageDropdownStatus = !this.manageDropdownStatus;
+        }
+      });
   }
 
 }

@@ -112,7 +112,7 @@
             text-decoration: none;
             transition: all .3s;
             font-size: 1.25rem;
-
+            cursor: pointer;
 
             &:hover {
                 color: rgba(70, 55, 55, 1);
@@ -143,6 +143,7 @@
 
     &__down {
         background-color: rgba(128, 190, 209, 0.1);
+        z-index: 11;
 
         &:hover {
             background-color:  rgba(128, 190, 209, 0.3);

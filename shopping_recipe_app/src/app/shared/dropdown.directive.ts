@@ -1,4 +1,4 @@
-import { Directive, HostListener, HostBinding, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
     selector: '[appDropdown]'
@@ -10,4 +10,13 @@ export class DropdownDirective {
 
     }
 
+    // @Output() public clickOutside = new EventEmitter();
+    
+    // @HostListener('document:click' ['$event.target'])
+    // public onClick(targetElement) {
+    //     const clickedInside = this.dropdownRef.nativeElement.contains(targetElement);
+    //     if(!clickedInside) {
+    //         this.clickOutside.emit(null);
+    //     }
+    // }
 }

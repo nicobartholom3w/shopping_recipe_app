@@ -12,3 +12,17 @@
 .body {
     padding: 3.5rem 2rem;;
 }
+
+.overlay {
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+    &:hover {
+        opacity: .5;
+    }
+}

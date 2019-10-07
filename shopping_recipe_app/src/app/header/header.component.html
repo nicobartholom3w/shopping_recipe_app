@@ -10,7 +10,7 @@
                     <div class="navi__list-item" routerLinkActive="current-menu" role="listitem"><a routerLink="/shopping-list" class="navi__link">Shopping List</a></div>
                 </div>
             </div>
-            <div class="navi__menu" (click)="displayMenu('main')">
+            <div class="navi__menu" (click)="menuStatus('main')">
                 <a class="navi__menu-dropdown dropdown__toggle navi__link" role="button" [ngClass]="mainDropdownStatus ? 'dropdown__down' : 'dropdown__up'">
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon main-icon">menu</mat-icon>
                 </a>
@@ -21,13 +21,13 @@
             </div>
         </div>
         <div class="navi__right">
-            <div class="dropdown" (click)="displayMenu('manage')" [ngClass]="manageDropdownStatus ? 'dropdown__down' : 'dropdown__up'">
+            <div class="dropdown" (click)="menuStatus('manage')" [ngClass]="manageDropdownStatus ? 'dropdown__down' : 'dropdown__up'">
                 <a class="dropdown__toggle dropdown__toggle-manage navi__link" role="button">Manage
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
                 </a>
                 <div class="dropdown__options" [ngClass]="manageDropdownStatus ? 'visible' : 'invisible'">
-                    <a href="#" class="dropdown__options-item">Save Data</a>
-                    <a href="#" class="dropdown__options-item">Fetch Data</a>
+                    <a class="dropdown__options-item">Save Data</a>
+                    <a class="dropdown__options-item">Fetch Data</a>
                 </div>
             </div>
         </div>
