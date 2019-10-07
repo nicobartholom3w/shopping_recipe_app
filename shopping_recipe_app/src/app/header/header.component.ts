@@ -28,8 +28,8 @@ export class HeaderComponent implements OnInit {
     this.manageOverlayService.overlayClickedSubject
       .subscribe((isOverlayActive) => {
         if(!isOverlayActive) {
-          this.mainDropdownStatus = !this.mainDropdownStatus;
-          this.manageDropdownStatus = !this.manageDropdownStatus;
+          this.mainDropdownStatus = false;
+          this.manageDropdownStatus = false;
         }
       });
   }
