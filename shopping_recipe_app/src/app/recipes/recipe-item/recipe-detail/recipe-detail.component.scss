@@ -18,6 +18,14 @@
 
     }
 
+    &__img {
+        margin: 2rem;
+
+        &-file {
+            height: 15rem;
+            width: auto;
+        }
+    }
     &__description {
         color: rgba(70, 55, 55, 1);
         font-size: 2rem;
@@ -44,7 +52,10 @@
 
 .managerecipe {
     width: 15rem;
-    margin: 1rem;
+    // margin-left: 15rem;
+    // margin-bottom: 7rem;
+    position: relative;
+    z-index: 11;
 
     &-top {
         display: none;
@@ -77,6 +88,7 @@
     }
 
     &__toggle {
+        position: absolute;
         display: flex;
         flex-direction: column;
         width: 15rem;
@@ -84,7 +96,10 @@
         border: solid 1px rgba(70, 55, 55, .65); 
         border-top: none;
         transition: all .3s;
+        overflow: hidden;
     }
+
+
 }
 
 .dropdown {
@@ -114,6 +129,8 @@
 
         &-top {
             display: block;
+            margin-left: 0rem;
+            margin-bottom: 7rem;
         }
 
         &-side {
