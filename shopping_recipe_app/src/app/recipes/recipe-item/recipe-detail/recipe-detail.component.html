@@ -1,5 +1,5 @@
 <div class="managerecipe managerecipe-top" role="button" (click)="openManageRecipe()">  
-    <a [routerLink]="['/recipe-detail']" class="button managerecipe__button link" [ngClass]="status ? 'dropdown__down' : 'dropdown__up'">Manage Recipe
+    <a class="button managerecipe__button link" [ngClass]="status ? 'dropdown__down' : 'dropdown__up'">Manage Recipe
         <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
     </a>
     <div class="managerecipe__toggle" [ngClass]="status ? 'visible' : 'invisible'">
@@ -8,6 +8,7 @@
         <a routerLink="" class="recipe__link">Delete Recipe</a>
     </div>
 </div>
+<button class="button back__button" [routerLink]="['/recipes']"> <mat-icon class="back__button-icon">keyboard_backspace</mat-icon><span class="back__button-span">Back to Recipes</span></button>
 <div class="recipe__header-container">
     
     <h1 class="recipe__name">{{ recipe.name }}</h1>

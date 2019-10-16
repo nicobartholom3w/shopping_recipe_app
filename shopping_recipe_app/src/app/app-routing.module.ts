@@ -12,8 +12,8 @@ const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'recipes', component: RecipesComponent, children: [] },
     { path: 'shopping-list', component: ShoppingListComponent },
+    { path: '*', component: HomeComponent },
     { path: 'recipes/recipe-detail/:id', component: RecipeDetailComponent },
-
   ]
 
   @NgModule({

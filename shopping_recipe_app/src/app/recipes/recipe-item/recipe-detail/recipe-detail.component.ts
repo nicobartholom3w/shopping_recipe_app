@@ -32,14 +32,8 @@ export class RecipeDetailComponent implements OnInit {
 
     this.route.params
       .subscribe((params: Params) => {
-        console.log('apple');
         this.id = Number(params.id);
         this.recipe = this.recipesService.getRecipe(this.id);
-        // let recipes = recipesService.getRecipes();
-        // this.recipe = recipes.find((recipe: Recipe) => {
-        //   return recipe.id === this.id;
-        // });
-        
       });
   }
 
