@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../../recipe.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { RecipesService } from '../../recipes.service';
 import { ManageOverlayService } from 'src/app/manage-overlay.service';
 
@@ -19,14 +19,7 @@ export class RecipeDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private recipesService: RecipesService,
               private manageOverlayService: ManageOverlayService) { 
-    this.route.params.subscribe((params) => {
-      this.id = Number(params.id);
-      let recipes = recipesService.getRecipes();
-      this.recipe = recipes.find((recipe: Recipe) => {
-        return recipe.id === this.id;
-      });
-      
-    });
+    
   }
 
   ngOnInit() {
@@ -36,6 +29,18 @@ export class RecipeDetailComponent implements OnInit {
           this.status = false;
         }
     });
+
+    this.route.params
+      .subscribe((params: Params) => {
+        console.log('apple');
+        this.id = Number(params.id);
+        this.recipe = this.recipesService.getRecipe(this.id);
+        // let recipes = recipesService.getRecipes();
+        // this.recipe = recipes.find((recipe: Recipe) => {
+        //   return recipe.id === this.id;
+        // });
+        
+      });
   }
 
   openManageRecipe() {

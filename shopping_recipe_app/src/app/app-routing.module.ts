@@ -10,9 +10,10 @@ import { RecipeDetailComponent } from './recipes/recipe-item/recipe-detail/recip
 const appRoutes: Routes = [
     // { path: '', component: AppComponent },
     { path: '', component: HomeComponent },
-    { path: 'recipes', component: RecipesComponent },
+    { path: 'recipes', component: RecipesComponent, children: [] },
     { path: 'shopping-list', component: ShoppingListComponent },
-    { path: 'recipe-detail/:id', component: RecipeDetailComponent }
+    { path: 'recipes/recipe-detail/:id', component: RecipeDetailComponent },
+
   ]
 
   @NgModule({

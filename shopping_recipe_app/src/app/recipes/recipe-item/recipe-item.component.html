@@ -1,5 +1,5 @@
 
-    <a [routerLink]="['/recipe-detail', recipe.id]" class="item__link" (click)="onSelected()">
+    <a [routerLink]="['recipe-detail', recipe.id]" class="item__link">
         <div class="item">
             <div class="item__text">
                 <h4 class="item__title"> {{ recipe.name }}</h4>
