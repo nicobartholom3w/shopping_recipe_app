@@ -1,7 +1,8 @@
 .form-container {
-
+    
     &__buttons {
         display: flex;
+        margin: 3rem 0;
 
         &-button {
             display: flex;
@@ -26,4 +27,23 @@
             align-items: center;
         }
     }
+}
+
+.form {
+    // padding: 1rem;
+
+    &__group {
+
+        &-label {
+
+        }
+        &-input {
+
+        }
+    }
+}
+
+.edit-header {
+    margin-top: 0;
+    font-size: 2.5rem;
 }
