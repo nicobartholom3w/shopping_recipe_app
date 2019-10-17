@@ -1,0 +1,29 @@
+.form-container {
+
+    &__buttons {
+        display: flex;
+
+        &-button {
+            display: flex;
+            align-items: center;
+        }
+
+        &-span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2.4rem;
+            font-size: 1.5rem;
+        }
+
+        &-icon {
+            font-family: 'Material Icons' !important;
+            font-size: 2rem;
+            margin-right: .5rem;
+            margin-left: .25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

@@ -1,1 +1,18 @@
-<p>recipe-edit works!</p>
+<div class="form-container">
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+        <div class="form-container__buttons">
+            <button class="button form-container__buttons-button" type="submit" [disabled]="!recipeForm.valid">
+                <mat-icon class="form-container__buttons-icon">save_alt</mat-icon>
+                <span class="form-container__buttons-span">Save</span>
+            </button>
+            <button class="button form-container__buttons-button" type="button" (click)="onCancel()">
+                <mat-icon class="form-container__buttons-icon">cancel</mat-icon>
+                <span class="form-container__buttons-span">Cancel</span>
+            </button>
+        </div>
+        <div class="form-container__info">
+            
+        </div>
+    </form>
+    
+</div>
