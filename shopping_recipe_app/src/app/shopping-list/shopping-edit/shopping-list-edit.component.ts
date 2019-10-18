@@ -12,4 +12,11 @@ export class ShoppingListEditComponent implements OnInit {
   ngOnInit() {
   }
 
+  onDelete() {
+
+  }
+
+  onClear() {
+    
+  }
 }

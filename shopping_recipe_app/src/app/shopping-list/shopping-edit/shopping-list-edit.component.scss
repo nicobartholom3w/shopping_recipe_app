@@ -1,0 +1,20 @@
+
+.button {
+    &__container {
+        display: flex;
+        
+    }
+    &__edit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-span {
+            margin-left: 1rem;
+        }
+
+        &-icon {
+            margin-right: .5rem;
+        }
+    }
+}

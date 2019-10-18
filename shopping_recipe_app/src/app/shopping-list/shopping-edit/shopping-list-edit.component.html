@@ -1,4 +1,4 @@
-<form>
+<form >
     <div class="row">
         <div class="col-sm-5 form-group">
             <label for="name">Name</label>
@@ -9,11 +9,18 @@
             <input type="number" id="amount" class="form-control">
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <button class="button">Add</button>
-            <button class="button">Delete</button>
-            <button class="button">Clear</button>
-        </div>
+    <div class="button__container">
+            <button class="button button__edit" type="submit">
+                <span class="button__edit-span">Add</span>
+                <mat-icon class="button__edit-icon">add_circle_outline</mat-icon> 
+            </button>
+            <button class="button button__edit" type="button" (click)="onDelete()">
+                <span class="button__edit-span">Delete</span>
+                <mat-icon class="button__edit-icon">delete</mat-icon>
+            </button>
+            <button class="button button__edit" type="button" (click)="onClear()">
+                <span class="button__edit-span">Clear</span>
+                <mat-icon class="button__edit-icon">clear_all</mat-icon> 
+            </button>
     </div>
 </form>
