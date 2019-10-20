@@ -20,9 +20,10 @@
                 <label class="form__group-label" for="image">Image URL</label>
                 <input type="text" id="image" formControlName="image" class="form__group-input">
             </div>
-            <div class="form__group">
+            <div class="form__group desc">
                 <label class="form__group-label" for="description">Description</label>
-                <input type="text" id="description" formControlName="description" class="form__group-input">
+                <!-- <input type="textarea" id="description" formControlName="description" class="form__group-input"> -->
+                <textarea name="description" formControlName="description" id="description" cols="30" rows="3"></textarea>
             </div>
             <div class="form__group">
                 <label class="form__group-label" for="ingredients">Ingredients</label>
