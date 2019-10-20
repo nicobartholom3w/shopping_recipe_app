@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../../recipe.model';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { RecipesService } from '../../recipes.service';
 import { ManageOverlayService } from 'src/app/manage-overlay.service';
 
@@ -17,6 +17,7 @@ export class RecipeDetailComponent implements OnInit {
 
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private recipesService: RecipesService,
               private manageOverlayService: ManageOverlayService) { 
     
@@ -40,6 +41,10 @@ export class RecipeDetailComponent implements OnInit {
   openManageRecipe() {
     this.status = !this.status;
     this.manageOverlayService.manageOverlay();
+  }
+
+  editRecipe() {
+    this.router.navigate(['edit'], {relativeTo: this.route});
   }
   
 }

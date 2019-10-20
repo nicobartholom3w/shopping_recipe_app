@@ -19,7 +19,7 @@
         </a>
         <div class="managerecipe__toggle" [ngClass]="status ? 'visible' : 'invisible'">
             <a [routerLink]="['/shopping-list']" class="recipe__link">To Shopping List</a>
-            <a routerLink="" class="recipe__link">Edit Recipe</a>
+            <a class="recipe__link" (click)="editRecipe()">Edit Recipe</a>
             <a routerLink="" class="recipe__link">Delete Recipe</a>
         </div>
     </div>
