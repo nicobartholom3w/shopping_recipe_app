@@ -26,9 +26,17 @@
                 <textarea name="description" formControlName="description" id="description" cols="30" rows="3"></textarea>
             </div>
             <div class="form__group">
-                <label class="form__group-label" for="ingredients">Ingredients</label>
-                <input type="text" formControlName="ingredientsName" class="form__group-input">
-                <input type="number" formControlName="ingredientsAmount" class="form__group-input">
+                <div class="form__group-label" for="ingredients">Ingredients</div>
+                    <div class="form__group-ingredients">
+                        <div class="form__group-ingredient">
+                            <label for="ingredientsName">Ingredient</label>
+                            <input id="ingredientsName" type="text" formControlName="ingredientsName" class="form__group-input">
+                        </div>
+                        <div class="form__group-ingredient">
+                            <label for="ingredientsAmount">Amount</label>
+                            <input id="ingredientsAmount" type="number" formControlName="ingredientsAmount" class="form__group-input">
+                        </div>                
+                    </div>
             </div>
         </div>
     </form>

@@ -38,9 +38,19 @@
         
         &-label {
             width: 10rem;
+            font-weight: bold;
         }
         &-input {
             margin-right: 2rem;
+        }
+
+        &-ingredients {
+            display: flex;
+            margin-left: 10rem;
+        }
+        &-ingredient {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
