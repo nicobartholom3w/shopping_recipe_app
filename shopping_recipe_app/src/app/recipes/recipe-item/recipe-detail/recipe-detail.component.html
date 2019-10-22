@@ -18,7 +18,7 @@
             <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
         </a>
         <div class="managerecipe__toggle" [ngClass]="status ? 'visible' : 'invisible'">
-            <a [routerLink]="['/shopping-list']" class="recipe__link">To Shopping List</a>
+            <a class="recipe__link" (click)="addToShoppingList()">Add to Shopping List</a>
             <a class="recipe__link" (click)="editRecipe()">Edit Recipe</a>
             <a routerLink="" class="recipe__link">Delete Recipe</a>
         </div>
