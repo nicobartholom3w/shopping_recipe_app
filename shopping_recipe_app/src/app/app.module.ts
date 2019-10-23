@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { RecipeDetailComponent } from './recipes/recipe-item/recipe-detail/recip
 import { DropdownDirective } from './shared/dropdown.directive';
 import { HomeComponent } from './home/home.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { DeleteConfirmDialogueComponent } from './shared/delete-confirm-dialogue/delete-confirm-dialogue.component';
 
 
 
@@ -37,7 +39,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     RecipeDetailComponent,
     DropdownDirective,
     HomeComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    DeleteConfirmDialogueComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDialogModule,
     MatIconModule,
     AppRoutingModule,
     ReactiveFormsModule
