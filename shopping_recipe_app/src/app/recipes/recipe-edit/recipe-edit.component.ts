@@ -22,7 +22,7 @@ export class RecipeEditComponent implements OnInit {
       .subscribe(
         (params: Params) => {
           this.id = Number(params['id']);
-          this.editMode = params['id'] !== null;
+          this.editMode = params['id'] != null;
           this.formInit();
         }
       )
@@ -56,6 +56,15 @@ export class RecipeEditComponent implements OnInit {
       'description': new FormControl(recipeDescription, Validators.required),
       'ingredients': recipeIngredients
     });
+  }
+
+  onAddIngredient() {
+    (<FormArray>this.recipeForm.get('ingredients')).push(
+      new FormGroup({
+        'ingredientName': new FormControl(null, Validators.required),
+        'ingredientAmount': new FormControl(null, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
+      })
+    )
   }
 
   onCancel() {

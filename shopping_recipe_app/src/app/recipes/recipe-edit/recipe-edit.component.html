@@ -25,18 +25,24 @@
                 <!-- <input type="textarea" id="description" formControlName="description" class="form__group-input"> -->
                 <textarea name="description" formControlName="description" id="description" cols="30" rows="3"></textarea>
             </div>
-            <div class="form__group">
-                <div class="form__group-label" for="ingredients">Ingredients</div>
-                    <div class="form__group-ingredients">
-                        <div class="form__group-ingredient">
-                            <label for="ingredientsName">Ingredient</label>
-                            <input id="ingredientsName" type="text" formControlName="ingredientsName" class="form__group-input">
-                        </div>
-                        <div class="form__group-ingredient">
-                            <label for="ingredientsAmount">Amount</label>
-                            <input id="ingredientsAmount" type="number" formControlName="ingredientsAmount" class="form__group-input">
-                        </div>                
+            <div class="form__group" formArrayName="ingredients">
+                <!-- <div class="form__group-label" for="ingredients">Ingredients</div> -->
+                <button type="button" class="button form-container__buttons-button button__ingredient" (click)="onAddIngredient()">
+                    <mat-icon class="form-container__buttons-icon">add_circle_outline</mat-icon>
+                    <span class="form-container__buttons-span">Add Ingredient</span>
+                </button>
+                <div class="form__group-ingredients"
+                    *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
+                    [formGroupName]="i">
+                    <div class="form__group-ingredient">
+                        <label for="ingredientsName">Ingredient</label>
+                        <input id="ingredientsName" type="text" formControlName="ingredientsName" class="form__group-input">
                     </div>
+                    <div class="form__group-ingredient">
+                        <label for="ingredientsAmount">Amount</label>
+                        <input id="ingredientsAmount" type="number" formControlName="ingredientsAmount" class="form__group-input">
+                    </div>                
+                </div>
             </div>
         </div>
     </form>

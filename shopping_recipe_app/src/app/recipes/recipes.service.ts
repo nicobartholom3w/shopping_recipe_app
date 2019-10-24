@@ -8,7 +8,7 @@ import { Subject } from "rxjs";
 @Injectable( {providedIn: 'root'})
 
 export class RecipesService {
-    // recipeSelected = new EventEmitter<Recipe>();
+    recipeSelected = new Subject<Recipe>();
     recipesChanged = new Subject<Recipe[]>();
 
     recipes: Recipe [] = [
@@ -24,7 +24,7 @@ export class RecipesService {
         ]),
         new Recipe(3, 'Delicious Recipe', 'Splendorous sweets potats', 'assets/img/recipe-icon.svg',
         [
-            new Ingredient('sweets potatos', 52),
+            new Ingredient('sweets potats', 52),
             new Ingredient('onions', 200)
         ])
       ];
