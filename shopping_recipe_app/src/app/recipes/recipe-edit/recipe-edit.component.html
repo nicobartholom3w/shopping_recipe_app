@@ -31,15 +31,17 @@
                     <mat-icon class="form-container__buttons-icon">add_circle_outline</mat-icon>
                     <span class="form-container__buttons-span">Add Ingredient</span>
                 </button>
+                <div class="ingredient__label-container" *ngIf="areIngredients">
+                    <label for="ingredientsName" class="ingredient__label">Ingredient</label>
+                    <label for="ingredientsAmount" class="ingredient__label">Amount</label>
+                </div>
                 <div class="form__group-ingredients"
                     *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
                     [formGroupName]="i">
                     <div class="form__group-ingredient">
-                        <label for="ingredientsName">Ingredient</label>
                         <input id="ingredientsName" type="text" formControlName="ingredientsName" class="form__group-input">
                     </div>
                     <div class="form__group-ingredient">
-                        <label for="ingredientsAmount">Amount</label>
                         <input id="ingredientsAmount" type="number" formControlName="ingredientsAmount" class="form__group-input">
                     </div>                
                 </div>
