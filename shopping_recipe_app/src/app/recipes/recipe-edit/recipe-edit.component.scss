@@ -46,8 +46,10 @@
 
         &-ingredients {
             display: flex;
+            align-items: center;
             margin-left: 10rem;
         }
+
         &-ingredient {
             display: flex;
             flex-direction: column;
@@ -67,12 +69,29 @@
 }
 
 .button {
-
     &__ingredient {
         width: 15rem;
         margin-left: 0;
         margin-top: 2rem;
+
+        &-delete {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
+
 }
 
 .ingredient__label {

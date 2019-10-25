@@ -49,6 +49,7 @@ export class RecipeEditComponent implements OnInit {
             })
           );
         }
+        this.areIngredients = true;
       }
     }
     this.recipeForm = new FormGroup({
