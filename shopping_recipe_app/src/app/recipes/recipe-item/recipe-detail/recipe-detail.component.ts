@@ -52,4 +52,9 @@ export class RecipeDetailComponent implements OnInit {
     this.router.navigate(['shopping-list']);
   }
 
+  onDeleteRecipe() {
+    // TODO: ADD CONFIRMATION POPUP
+    this.recipesService.deleteRecipe(this.recipe.id);
+    this.router.navigate(['recipes']);
+  }
 }
