@@ -45,3 +45,7 @@ a:hover {
     display: none;
     height: 0;
 }
+
+mat-icon {
+    font-family: 'Material Icons' !important;
+}
