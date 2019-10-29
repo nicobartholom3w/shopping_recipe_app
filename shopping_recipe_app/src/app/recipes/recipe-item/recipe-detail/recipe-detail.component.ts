@@ -13,6 +13,7 @@ export class RecipeDetailComponent implements OnInit {
   // @Input() recipe: Recipe[];
   status: boolean = false;
   id: number;
+  index: number;
   recipe: Recipe;
 
 
@@ -34,7 +35,8 @@ export class RecipeDetailComponent implements OnInit {
     this.route.params
       .subscribe((params: Params) => {
         this.id = Number(params.id);
-        this.recipe = this.recipesService.getRecipe(this.id);
+        this.index = this.id - 1;
+        this.recipe = this.recipesService.getRecipe(this.index);
       });
   }
 
@@ -54,7 +56,7 @@ export class RecipeDetailComponent implements OnInit {
 
   onDeleteRecipe() {
     // TODO: ADD CONFIRMATION POPUP
-    this.recipesService.deleteRecipe(this.recipe.id);
+    this.recipesService.deleteRecipe(this.index);
     this.router.navigate(['recipes']);
   }
 }

@@ -35,12 +35,12 @@ export class RecipesService {
         return this.recipes.slice();
     }
 
-    getRecipe(id: number) {
-        return this.recipes[id - 1];
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 
-    updateRecipe(id: number, newRecipe: Recipe) {
-        this.recipes[id - 1] = newRecipe;
+    updateRecipe(index: number, newRecipe: Recipe) {
+        this.recipes[index] = newRecipe;
         this.recipesChanged.next(this.recipes.slice());
     }
 

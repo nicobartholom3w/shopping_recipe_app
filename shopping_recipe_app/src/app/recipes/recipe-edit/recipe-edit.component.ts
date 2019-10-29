@@ -12,6 +12,7 @@ import { Recipe } from '../recipe.model';
 export class RecipeEditComponent implements OnInit {
   recipeForm: FormGroup;
   id: number;
+  index: number;
   editMode = false;
   areIngredients = false;
 
@@ -24,6 +25,7 @@ export class RecipeEditComponent implements OnInit {
       .subscribe(
         (params: Params) => {
           this.id = Number(params['id']);
+          this.index = this.id - 1;
           this.editMode = params['id'] != null;
           this.formInit();
         }
@@ -37,7 +39,7 @@ export class RecipeEditComponent implements OnInit {
     let recipeIngredients = new FormArray([]);
 
     if(this.editMode) {
-      const recipe = this.recipeService.getRecipe(this.id);
+      const recipe = this.recipeService.getRecipe(this.index);
       recipeName = recipe.name;
       recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;
@@ -45,8 +47,8 @@ export class RecipeEditComponent implements OnInit {
         for(let ingredient of recipe.ingredients) {
           recipeIngredients.push(
             new FormGroup({
-              'ingredientsName': new FormControl(ingredient.name, Validators.required),
-              'ingredientsAmount': new FormControl(ingredient.amount, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
+              'name': new FormControl(ingredient.name, Validators.required),
+              'amount': new FormControl(ingredient.amount, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
             })
           );
         }
@@ -55,7 +57,7 @@ export class RecipeEditComponent implements OnInit {
     }
     this.recipeForm = new FormGroup({
       'name': new FormControl(recipeName, Validators.required),
-      'image': new FormControl(recipeImagePath, Validators.required),
+      'imagePath': new FormControl(recipeImagePath, Validators.required),
       'description': new FormControl(recipeDescription, Validators.required),
       'ingredients': recipeIngredients
     });
@@ -77,7 +79,7 @@ export class RecipeEditComponent implements OnInit {
 
   onSubmit() {
     if(this.editMode) {
-      this.recipeService.updateRecipe(this.id, this.recipeForm.value);
+      this.recipeService.updateRecipe(this.index, this.recipeForm.value);
     }
     else {
       this.recipeService.addRecipe(this.recipeForm.value);
