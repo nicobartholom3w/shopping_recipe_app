@@ -2,7 +2,8 @@
 <div class="form-container">
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
         <div class="form-container__buttons">
-            <button class="button form-container__buttons-button" type="submit" [disabled]="!recipeForm.valid">
+            <button class="button form-container__buttons-button" type="submit" [disabled]="!recipeForm.valid" 
+            [class.disabled]="!recipeForm.valid">
                 <mat-icon class="form-container__buttons-icon">save_alt</mat-icon>
                 <span class="form-container__buttons-span">Save</span>
             </button>

@@ -15,6 +15,7 @@ export class RecipeEditComponent implements OnInit {
   index: number;
   editMode = false;
   areIngredients = false;
+  numberOfIngredients: number;
 
   constructor(private route: ActivatedRoute,
               private recipeService: RecipesService,
@@ -37,9 +38,11 @@ export class RecipeEditComponent implements OnInit {
     let recipeImagePath = '';
     let recipeDescription = '';
     let recipeIngredients = new FormArray([]);
+    this.numberOfIngredients = 0;
 
     if(this.editMode) {
       const recipe = this.recipeService.getRecipe(this.index);
+      this.numberOfIngredients = recipe.ingredients.length;
       recipeName = recipe.name;
       recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;
@@ -66,10 +69,11 @@ export class RecipeEditComponent implements OnInit {
   onAddIngredient() {
     (<FormArray>this.recipeForm.get('ingredients')).push(
       new FormGroup({
-        'ingredientName': new FormControl(null, Validators.required),
-        'ingredientAmount': new FormControl(null, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
+        'name': new FormControl(null, Validators.required),
+        'amount': new FormControl(null, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
       })
     )
+    this.numberOfIngredients++;
     this.areIngredients = true;
   }
 
@@ -89,6 +93,9 @@ export class RecipeEditComponent implements OnInit {
 
   onDeleteIngredient(ingredientIndex: number) {
     (<FormArray>this.recipeForm.get('ingredients')).removeAt(ingredientIndex);
-    // this.recipeService.removeIngredient(this.id, ingredientIndex);
+    this.numberOfIngredients--;
+    if(this.numberOfIngredients === 0) {
+      this.areIngredients = false;
+    }
   }
 }
