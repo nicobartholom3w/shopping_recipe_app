@@ -40,7 +40,10 @@ export class ShoppingListEditComponent implements OnInit {
   }
 
   onDelete() {
-    
+    if(this.editMode) {
+      this.shoppingListService.deleteIngredient(this.editedIngredientIndex);
+    }
+    this.onClear();
   }
 
   onClear() {
