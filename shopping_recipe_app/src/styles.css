@@ -17,6 +17,7 @@
 .button:hover {
     background-color:  rgba(128, 190, 209, 1);
     color: white;
+    cursor: pointer;
 }
 
 .link {
@@ -48,4 +49,13 @@ a:hover {
 
 mat-icon {
     font-family: 'Material Icons' !important;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+}
+
+.disabled:hover {
+    background-color: rgba(128, 190, 209, .5);
+    color:  rgba(70, 55, 55, .5);
 }

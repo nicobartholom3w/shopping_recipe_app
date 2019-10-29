@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
     <div class="row">
         <div class="col-sm-5 form-group">
             <label for="name">Name</label>
@@ -10,8 +10,9 @@
         </div>
     </div>
     <div class="button__container">
-            <button class="button button__edit" type="submit">
-                <span class="button__edit-span">Add</span>
+            <button class="button button__edit" type="submit" 
+                [disabled]="!f.valid" [class.disabled]="!f.valid">
+                <span class="button__edit-span">{{ editMode ? 'Update' : 'Add' }}</span>
                 <mat-icon class="button__edit-icon">add_circle_outline</mat-icon> 
             </button>
             <button class="button button__edit" type="button" (click)="onDelete()">

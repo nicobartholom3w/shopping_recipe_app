@@ -10,20 +10,37 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
 })
 export class ShoppingListEditComponent implements OnInit {
   @ViewChild('f', { static: false }) slForm: NgForm;
+  editMode = false;
+  editedIngredientIndex: number;
 
   constructor(private shoppingListService: ShoppingListService) { }
 
   ngOnInit() {
+    this.shoppingListService.ingredientSelected
+      .subscribe((ingredientIndex: number) => {
+        this.editMode = true;
+        this.editedIngredientIndex = ingredientIndex;
+        let selectedIngredient = this.shoppingListService.getIngredient(ingredientIndex);
+        this.slForm.setValue({
+          name: selectedIngredient.name,
+          amount: selectedIngredient.amount
+        })
+      });
   }
 
   onSubmit(form: NgForm) {
     let value = form.value;
     let newIngredient = new Ingredient(value.name, value.amount);
-    this.shoppingListService.addIngredient(newIngredient);
+    if(this.editMode) {
+      this.shoppingListService.editIngredient(this.editedIngredientIndex, newIngredient);
+    }
+    else {
+      this.shoppingListService.addIngredient(newIngredient);
+    }
   }
 
   onDelete() {
-
+    
   }
 
   onClear() {
