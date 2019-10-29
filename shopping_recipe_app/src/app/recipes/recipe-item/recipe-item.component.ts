@@ -12,6 +12,7 @@ export class RecipeItemComponent implements OnInit {
   @HostBinding('class.recipe-item-class') recipeItemClass = true;
 
   @Input() recipe: Recipe;
+  @Input() index: number;
 
   constructor(private recipesService: RecipesService) { }
 
@@ -19,8 +20,4 @@ export class RecipeItemComponent implements OnInit {
    
   }
 
-  // onSelected() {
-  //   console.log(this.recipe);
-  //   this.recipesService.recipeSelected.emit(this.recipe);
-  // }
 }

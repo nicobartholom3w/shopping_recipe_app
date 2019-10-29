@@ -12,17 +12,17 @@ export class RecipesService {
     recipesChanged = new Subject<Recipe[]>();
 
     recipes: Recipe [] = [
-        new Recipe(1, 'A Test Recipe', 'This is simply a test', 'assets/img/recipe-icon.svg', 
+        new Recipe('A Test Recipe', 'This is simply a test', 'assets/img/recipe-icon.svg', 
         [
             new Ingredient('Meat', 10),
             new Ingredient('Cheeses', 22)
         ]),
-        new Recipe(2, 'Another Test Recipe', 'This is another test recipe', 'assets/img/recipe-icon.svg',
+        new Recipe('Another Test Recipe', 'This is another test recipe', 'assets/img/recipe-icon.svg',
         [
             new Ingredient('Apples', 36),
             new Ingredient('Kabocha', 57)
         ]),
-        new Recipe(3, 'Delicious Recipe', 'Splendorous sweets potats', 'assets/img/recipe-icon.svg',
+        new Recipe('Delicious Recipe', 'Splendorous sweets potats', 'assets/img/recipe-icon.svg',
         [
             new Ingredient('sweets potats', 52),
             new Ingredient('onions', 200)
@@ -39,8 +39,8 @@ export class RecipesService {
         return this.recipes[id - 1];
     }
 
-    updateRecipe(index: number, newRecipe: Recipe) {
-        this.recipes[index] = newRecipe;
+    updateRecipe(id: number, newRecipe: Recipe) {
+        this.recipes[id - 1] = newRecipe;
         this.recipesChanged.next(this.recipes.slice());
     }
 
