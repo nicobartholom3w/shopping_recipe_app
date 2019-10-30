@@ -37,6 +37,7 @@ export class ShoppingListEditComponent implements OnInit {
     else {
       this.shoppingListService.addIngredient(newIngredient);
     }
+    this.onClear();
   }
 
   onDelete() {

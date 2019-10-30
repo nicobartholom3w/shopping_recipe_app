@@ -22,11 +22,17 @@ export class RecipesService {
             new Ingredient('Apples', 36),
             new Ingredient('Kabocha', 57)
         ]),
+        new Recipe('alskdjf;laskdjf;alskdjf;laksjdf;laksjdf;lakjsdf;lkajsd;flkjasd;lfkjas;ldfkjas;ldfkjsal;dfjk', 'alskdjf;laskdjf;alskdjf;laksjdf;laksjdf;lakjsdf;lkajsd;flkjasd;lfkjas;ldfkjas;ldfkjsal;dfjk', 'alskdjf;laskdjf;alskdjf;laksjdf;laksjdf;lakjsdf;lkajsd;flkjasd;lfkjas;ldfkjas;ldfkjsal;dfjk',
+        [
+            new Ingredient('sweets potats', 52),
+            new Ingredient('onions', 200)
+        ]),
         new Recipe('Delicious Recipe', 'Splendorous sweets potats', 'assets/img/recipe-icon.svg',
         [
             new Ingredient('sweets potats', 52),
             new Ingredient('onions', 200)
         ])
+       
       ];
     
     constructor(private shoppingListService: ShoppingListService) {}
