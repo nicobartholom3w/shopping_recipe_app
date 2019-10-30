@@ -1,9 +1,15 @@
+
 .recipe {
 
     &__name {
         margin: 2rem 0;
         color: rgba(70, 55, 55, 1);
         font-weight: bold;
+        padding-right: 21rem;
+        max-width: 100%;
+        display: table-cell;
+        word-wrap: break-word;
+        box-sizing: border-box;
     }
     &__link {
         padding: .5rem 0;
@@ -30,14 +36,20 @@
         color: rgba(70, 55, 55, 1);
         font-size: 2rem;
         margin-bottom: 1rem;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 auto;
+        overflow-wrap: break-word;
     }
 
     &__header {
 
         &-container {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
+            width: 100%;
         }
     }
 }
@@ -46,16 +58,18 @@
     margin: 1rem;
     background-color:  rgba(128, 190, 209, .1);
     color: rgba(70, 55, 55, .8);
-    max-width: 26rem;
+    width: 26rem;
+    overflow-wrap: break-word;
     padding-left: 1.5rem;
 }
 
 .managerecipe {
     width: 15rem;
-    // margin-left: 15rem;
-    // margin-bottom: 7rem;
     position: relative;
+    
     z-index: 11;
+    // display: block;
+    // padding-left: 11rem;
 
     &-top {
         display: none;
@@ -63,6 +77,8 @@
 
     &-side {
         display: block;
+        right: 16rem;
+        top: 3rem;
     }
 
     &__button {
@@ -136,6 +152,11 @@
         &-side {
             display: none;
         }
+    }
+
+    .recipe__name {
+        padding: 0;
+        margin-bottom: 0;
     }
 }
 

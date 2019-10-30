@@ -4,12 +4,10 @@
     flex: 0 1 50%;
     box-sizing: border-box;
     padding: 1rem 0;
-    // flex-wrap: nowrap;
     overflow: hidden;
 }
 
 .item {
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +26,6 @@
         height: 10rem;
         display: flex;
         transition: all .3s;
-        background-color: purple;
         
         &:hover {
             color: rgba(70, 55, 55, 1);
@@ -44,7 +41,6 @@
         overflow: hidden;
         white-space: nowrap;
         width: 100%;
-        background-color: blue;
     }
 
     &__title {
@@ -59,9 +55,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        // min-width: 0;
         width: 100%;
-        background-color: pink;
     }
 
     &__img {
