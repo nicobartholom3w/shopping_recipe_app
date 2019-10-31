@@ -18,7 +18,6 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component';
 import { MaterialIconsComponent } from './material-icons/material-icons.component';
 import { RecipeDetailComponent } from './recipes/recipe-item/recipe-detail/recipe-detail.component';
-import { DropdownDirective } from './shared/dropdown.directive';
 import { HomeComponent } from './home/home.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { DeleteConfirmDialogueComponent } from './shared/delete-confirm-dialogue/delete-confirm-dialogue.component';
@@ -37,7 +36,6 @@ import { DeleteConfirmDialogueComponent } from './shared/delete-confirm-dialogue
     RecipeItemComponent,
     MaterialIconsComponent,
     RecipeDetailComponent,
-    DropdownDirective,
     HomeComponent,
     RecipeEditComponent,
     DeleteConfirmDialogueComponent

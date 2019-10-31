@@ -10,7 +10,6 @@ import { ManageOverlayService } from 'src/app/manage-overlay.service';
   styleUrls: ['./recipe-detail.component.scss']
 })
 export class RecipeDetailComponent implements OnInit {
-  // @Input() recipe: Recipe[];
   status: boolean = false;
   id: number;
   index: number;

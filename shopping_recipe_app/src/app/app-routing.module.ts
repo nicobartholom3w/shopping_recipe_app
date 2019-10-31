@@ -9,7 +9,6 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 
 
 const appRoutes: Routes = [
-    // { path: '', component: AppComponent },
     { path: '', component: HomeComponent, pathMatch: 'full' },
     { path: 'recipes', component: RecipesComponent, children: [] },
     { path: 'shopping-list', component: ShoppingListComponent },

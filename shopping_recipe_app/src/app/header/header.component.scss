@@ -45,7 +45,7 @@
 
     &__header {
         font-size: 3.5rem;
-        // min-width: 16rem;
+
         &-title {
             padding: 0 3rem 0 2.75rem;
         }
@@ -55,11 +55,9 @@
         height: 100%;
         display: flex;
         justify-content: space-between;
-        // width: 40rem;
 
         &-item {
             font-size: 2rem;
-            // width: 15rem;
         }
     }
 
@@ -109,7 +107,6 @@
 
         &-item {
             color:  rgba(70, 55, 55, .8);
-            // width: 120.5px;
             width: 100%;
             padding: .25rem;
             padding-left: 2.25rem;
@@ -164,7 +161,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // padding: 1.75rem;
     font-size: 3.5rem;
 }
 
