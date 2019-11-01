@@ -16,4 +16,12 @@ export class DeleteConfirmDialogueComponent implements OnInit {
   openDeleteConfirmDialog() {
     
   }
+
+  onDeleteCancel() {
+
+  }
+
+  onDeleteConfirmation() {
+    
+  }
 }

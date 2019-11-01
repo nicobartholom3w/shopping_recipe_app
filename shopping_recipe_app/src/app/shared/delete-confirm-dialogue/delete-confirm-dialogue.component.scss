@@ -1,0 +1,29 @@
+.delete {
+
+    &__title {
+        font-size: 3rem;
+    }
+    &__text {
+        font-size: 1.5rem;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: .5rem .75rem;
+
+    &__container {
+        display: flex;
+    }
+    &__span {
+        font-size: 1.5rem;
+        margin-right: .5rem;
+        display: block;
+    }
+    &__icon {
+        font-size: 2rem;
+        display: block;
+    }
+}

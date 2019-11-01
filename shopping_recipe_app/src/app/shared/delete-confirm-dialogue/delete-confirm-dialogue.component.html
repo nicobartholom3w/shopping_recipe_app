@@ -1,2 +1,12 @@
 <!-- <h1>{{ data.title }}</h1> -->
-<h1>Delete Recipe?</h1>
+<h1 class="delete__title">Delete Recipe</h1>
+<div class="delete__text">Are you sure you want to delete your recipe INSERTRECIPENAME?</div>
+<div class="button__container">
+    <button class="button" (click)="onConfirmDelete()">
+        <span class="button__span">Confirm Delete</span>
+        <mat-icon class="button__icon">delete</mat-icon></button>
+    <button class="button" (click)="onCancelDelete()">
+        <span class="button__span">Cancel</span>
+        <mat-icon class="button__icon">cancel</mat-icon>
+    </button>
+</div>
