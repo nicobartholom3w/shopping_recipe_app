@@ -3,6 +3,8 @@ import { Recipe } from '../../recipe.model';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { RecipesService } from '../../recipes.service';
 import { ManageOverlayService } from 'src/app/manage-overlay.service';
+import { MatDialog } from '@angular/material';
+import { DeleteConfirmDialogueComponent } from 'src/app/shared/delete-confirm-dialogue/delete-confirm-dialogue.component';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -19,8 +21,9 @@ export class RecipeDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private recipesService: RecipesService,
-              private manageOverlayService: ManageOverlayService) { 
-    
+              private manageOverlayService: ManageOverlayService,
+              public dialogue: MatDialog) { 
+              
   }
 
   ngOnInit() {
@@ -55,7 +58,19 @@ export class RecipeDetailComponent implements OnInit {
 
   onDeleteRecipe() {
     // TODO: ADD CONFIRMATION POPUP
-    this.recipesService.deleteRecipe(this.index);
-    this.router.navigate(['recipes']);
+    let dialogRef = this.dialogue.open(DeleteConfirmDialogueComponent, {
+      width: '400px',
+      height: '600px'
+    });
+    
+    dialogRef.afterClosed()
+      .subscribe(result => {
+
+      });
+
+      dialogRef.close('Deleted');
+    // this.recipesService.deleteRecipe(this.index);
+    // this.router.navigate(['recipes']);
   }
+
 }
