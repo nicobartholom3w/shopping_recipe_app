@@ -26,8 +26,8 @@
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="dropdown-icon">arrow_drop_down_circle</mat-icon>
                 </a>
                 <div class="dropdown__options" [ngClass]="manageDropdownStatus ? 'visible' : 'invisible'">
-                    <a class="dropdown__options-item">Save Data</a>
-                    <a class="dropdown__options-item">Fetch Data</a>
+                    <a class="dropdown__options-item" (click)="onSaveData()">Save Data</a>
+                    <a class="dropdown__options-item" (click)="onFetchData()">Fetch Data</a>
                 </div>
             </div>
         </div>

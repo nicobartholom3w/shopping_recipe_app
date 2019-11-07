@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, ElementRef, Input } from '@angular/core';
 import { ManageOverlayService } from '../manage-overlay.service';
 import { Subject } from 'rxjs';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,8 @@ export class HeaderComponent implements OnInit {
     this.manageOverlayService.manageOverlay();
   }
 
-  constructor(private manageOverlayService: ManageOverlayService) { }
+  constructor(private manageOverlayService: ManageOverlayService,
+              private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
     this.manageOverlayService.overlayClickedSubject
@@ -34,4 +36,11 @@ export class HeaderComponent implements OnInit {
       });
   }
 
+  onSaveData() {
+    this.dataStorageService.storeRecipes();
+  }
+
+  onFetchData() {
+
+  }
 }

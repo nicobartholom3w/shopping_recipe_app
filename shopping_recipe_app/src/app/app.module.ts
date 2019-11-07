@@ -21,6 +21,7 @@ import { RecipeDetailComponent } from './recipes/recipe-item/recipe-detail/recip
 import { HomeComponent } from './home/home.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { DeleteConfirmDialogueComponent } from './shared/delete-confirm-dialogue/delete-confirm-dialogue.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -49,7 +50,8 @@ import { DeleteConfirmDialogueComponent } from './shared/delete-confirm-dialogue
     MatDialogModule,
     MatIconModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
