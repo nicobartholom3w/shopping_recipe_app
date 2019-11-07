@@ -58,19 +58,19 @@ export class RecipeDetailComponent implements OnInit {
 
   onDeleteRecipe() {
     // TODO: ADD CONFIRMATION POPUP
-    let dialogRef = this.dialogue.open(DeleteConfirmDialogueComponent, {
-      width: '400px',
-      height: '600px'
-    });
+    // let dialogRef = this.dialogue.open(DeleteConfirmDialogueComponent, {
+    //   width: '400px',
+    //   height: '600px'
+    // });
     
-    dialogRef.afterClosed()
-      .subscribe(result => {
+    // dialogRef.afterClosed()
+    //   .subscribe(result => {
 
-      });
+    //   });
 
-      dialogRef.close('Deleted');
-    // this.recipesService.deleteRecipe(this.index);
-    // this.router.navigate(['recipes']);
+    //   dialogRef.close('Deleted');
+    this.recipesService.deleteRecipe(this.index);
+    this.router.navigate(['recipes']);
   }
 
 }
